@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: salmon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calender {
+  background-color: black;
+  color: white;
+  width: 450px;
+  height: 520px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.month-header {
+  height: 120px;
+  width: 100%;
+  background-color: turquoise;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: black;
+}
+
+.month h1 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.weekdays .days-name {
+  background-color: black;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.days-name div {
+  font-size: 15px;
+  font-weight: bold;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dates-section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 58px);
+  align-items: center;
+  /* padding: 2px; */
+}
+
+.dates-section div {
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+}
+
+.dates-section div:hover:not(.empty) {
+  border: 2px solid gray;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.dates-section .today {
+  background-color: turquoise;
+  color: black;
+  font-weight: bold;
+}
